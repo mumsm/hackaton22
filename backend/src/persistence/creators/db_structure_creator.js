@@ -16,7 +16,7 @@ db.serialize(() => {
         balance INTEGER NOT NULL
     )`); 
 
-    // db.run("INSERT INTO users (id, first_name, last_name, email, balance) VALUES (1, 'Alex', 'Doe', 'alex@hotmail.com', 0)"); 
+    db.run("INSERT INTO users (id, first_name, last_name, email, balance) VALUES (1, 'Alex', 'Doe', 'alex@hotmail.com', 8903)"); 
 
     db.each("SELECT * FROM users", (err, row) => {
         console.log(row);
@@ -26,20 +26,22 @@ db.serialize(() => {
         id INTEGER PRIMARY KEY,
         title TEXT NOT NULL,
         description TEXT NOT NULL,
-        price INTEGER NOT NULL
+        price INTEGER NOT NULL,
+        smartContractIndex INTEGER NOT NULL,
+        owner_user_id INTEGER NOT NULL
     )`);
 
     db.run("DELETE FROM nfts"); 
     
-    db.run("INSERT INTO nfts (id, title, description, price) VALUES (1, 'Red Coat', 'Fashion Coat', 100)"); 
+    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (1, 'Red Coat', 'Fashion Coat', 100, 0, 0)"); 
     
-    db.run("INSERT INTO nfts (id, title, description, price) VALUES (2, 'Blue Coat', 'Fashion Coat', 200)"); 
+    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (2, 'Blue Coat', 'Fashion Coat', 200, 1, 0)"); 
     
-    db.run("INSERT INTO nfts (id, title, description, price) VALUES (3, 'Green Coat', 'Fashion Coat', 300)"); 
+    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (3, 'Green Coat', 'Fashion Coat', 300, 2, 0)"); 
 
     db.each("SELECT * FROM nfts", (err, row) => {
         console.log(row);
-    });
+    }); 
 });
 
 db.close((err) => {
