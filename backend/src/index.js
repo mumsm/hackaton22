@@ -14,6 +14,8 @@ const db = new sqlite3.Database('./persistence/db/suschainable.db',  (err) => {
 
 const requestListener = async function (req, res) {
     const queryObject = url.parse(req.url, true).query;
+
+    console.log('Requesting', queryObject);
     
     let response;
 
