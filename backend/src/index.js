@@ -27,6 +27,7 @@ const requestListener = async function (req, res) {
         response = await listNfts(db);
     }
  
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.writeHead(200);
     res.end(JSON.stringify(response));
 }
