@@ -1,0 +1,57 @@
+
+Compiling your contracts...
+===========================
+> Compiling .\contracts\Migrations.sol
+> Compiling .\contracts\Suschainable.sol
+> Compilation warnings encountered:
+
+    Warning: Visibility for constructor is ignored. If you want the contract to be non-deployable, making it "abstract" is sufficient.    
+  --> project:/contracts/Suschainable.sol:14:3:
+   |
+14 |   constructor() public {
+   |   ^ (Relevant source part starts here and spans across multiple lines).
+
+
+> Artifacts written to C:\Users\murilo\Desktop\hackaton\hackaton22\smart-contracts\build\contracts
+> Compiled successfully using:
+   - solc: 0.8.16+commit.07a7930e.Emscripten.clang
+
+
+Starting migrations...
+======================
+> Network name:    'matic'
+> Network id:      80001
+> Block gas limit: 20096715 (0x132a6cb)
+
+
+2_suschainable.js
+=================
+
+   Deploying 'Suschainable'
+   ------------------------
+   > transaction hash:    0x1c31ad18cd150261b144b4a67650fcb71cbd214f6f0f5d155afab210b33427cf
+   > Blocks: 3            Seconds: 10
+   > contract address:    0xD3735c51C4649460Aa193b50Bd59C2Fe5b77F74B
+   > block number:        28034108
+   > block timestamp:     1662834995
+   > account:             0xbfC565D51379F170a19893D57Ffede8c23F8894e
+   > balance:             0.387966868646548159
+   > gas used:            621185 (0x97a81)
+   > gas price:           2.500000012 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00155296250745422 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 28034110)
+   > confirmation number: 2 (block: 28034111)
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.00155296250745422 ETH
+
+Summary
+=======
+> Total deployments:   1
+> Final cost:          0.00155296250745422 ETH
