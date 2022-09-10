@@ -9,15 +9,15 @@ contract Suschainable {
     string owner;
   }
 
-  NFT[] NFTs;
+  mapping(uint => NFT) public nfts;
 
-  constructor() public {
-    NFTs.push(NFT("Red Coat", "A fashion coat", "null"));
-    NFTs.push(NFT("Blue Coat", "A fashion coat", "null"));
-    NFTs.push(NFT("Green Coat", "A fashion coat", "null"));
+  constructor() {
+    nfts[0] = NFT("Red Coat", "A fashion coat", "null") ;
+    nfts[1] = NFT("Blue Coat", "A fashion coat", "null");
+    nfts[2] = NFT("Green Coat", "A fashion coat", "null");
   }
 
   function changeOwner(string memory newOwner, uint nftIndex) public {
-    NFTs[nftIndex].owner = newOwner;
+    nfts[nftIndex].owner = newOwner;
   }
 }
