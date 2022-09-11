@@ -33,25 +33,25 @@ db.serialize(() => {
 
     db.run("DELETE FROM nfts"); 
     
-    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (1, 'Red Coat', 'Fashion Coat', 100, 0, 0)"); 
+    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (1, 'Knee Pad', 'Legs protection', 100, 0, 0)"); 
     
-    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (2, 'Blue Coat', 'Fashion Coat', 200, 1, 0)"); 
+    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (2, 'Gloves', 'Hands protection', 200, 1, 0)"); 
     
-    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (3, 'Green Coat', 'Fashion Coat', 300, 2, 0)");
+    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (3, 'Rollerblades', 'Roll over Bethoven', 300, 2, 0)");
     
-    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (4, 'Black Coat', 'Fashion Coat', 400, 3, 0)");
+    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (4, 'Scooter', 'For extra lazy people', 500, 3, 0)");
     
-    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (5, 'Dogs Cookies', 'Feed the dogs', 500, 4, 0)");
+    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (5, 'Dogs Cookies', 'Feed the dogs', 1000, 4, 0)");
     
-    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (6, 'Skate', 'Become Tony Hawk', 3000, 5, 0)"); 
+    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (6, 'Skate', 'Become Tony Hawk', 2000, 5, 0)"); 
     
-    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (7, 'Eletric Bike', 'For lazy people', 5000, 6, 0)"); 
+    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (7, 'Electric Bike', 'For lazy people', 5000, 6, 0)"); 
     
-    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (8, 'Shades', 'Im Batman', 15000, 7, 0)"); 
+    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (8, 'Shades', 'I am Batman', 10000, 7, 0)"); 
     
-    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (9, 'Bulletproof Coat', 'Always prepared', 50000, 8, 0)"); 
+    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (9, 'Bulletproof Coat', 'Always prepared', 20000, 8, 0)"); 
     
-    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (10, 'Helmet', 'Unlock 100% of Cerebral Actions', 100000, 9, 0)"); 
+    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (10, 'Helmet', 'Unlock 100% of Cerebral Actions', 50000, 9, 0)"); 
 
     db.each("SELECT * FROM nfts", (err, row) => {
         console.log(row);
