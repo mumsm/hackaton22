@@ -19,6 +19,7 @@ const contract = new web3.eth.Contract(contractInfo.abi, contractAddress);
 export async function buyNftTransaction(newOwner, smartContractIndex) {
     return new Promise(async resolve => {
         let transaction = contract.methods.changeOwner(String(newOwner), smartContractIndex);
+        
         let encoded_tx = transaction.encodeABI();
         let transactionObject = {
             gas: await transaction.estimateGas({from: account}),
@@ -26,6 +27,7 @@ export async function buyNftTransaction(newOwner, smartContractIndex) {
             from: account,
             to: contractAddress
         };
+        
         console.log(transactionObject);
 
         web3.eth.accounts.signTransaction(transactionObject, privateKey, function (error, signedTx) {
