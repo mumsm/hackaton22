@@ -16,7 +16,7 @@ db.serialize(() => {
         balance INTEGER NOT NULL
     )`); 
 
-    db.run("INSERT INTO users (id, first_name, last_name, email, balance) VALUES (1, 'Alex', 'Doe', 'alex@hotmail.com', 8903)"); 
+    db.run("INSERT INTO users (id, first_name, last_name, email, balance) VALUES (1, 'Alex', 'Doe', 'alex@hotmail.com', 0)"); 
 
     db.each("SELECT * FROM users", (err, row) => {
         console.log(row);
