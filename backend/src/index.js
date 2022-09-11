@@ -1,7 +1,7 @@
 import http from 'http';
 import url from 'url';
 import sqlite3 from 'sqlite3';  
-import { listUsers, getBalance } from './domains/users.js'
+import { listUsers, getBalance, increaseUserBalance } from './domains/users.js'
 import { listNfts, getInventory } from './domains/nfts.js'
 import { buyNft, displayNftsFromSmartContract } from './domains/nfts.js'
 
@@ -42,6 +42,10 @@ const requestListener = async function (req, res) {
 
     if (queryObject.endpoint === 'getInventory') {
         response = await getInventory(db, queryObject);
+    }
+
+    if (queryObject.endpoint === 'increaseUserBalance') {
+        response = await increaseUserBalance(db, queryObject);
     }
  
     res.setHeader('Access-Control-Allow-Origin', '*');

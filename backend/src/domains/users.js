@@ -21,6 +21,18 @@ export const getBalance = async (db, requestObject) => {
     return user.balance;
 }
 
+export const increaseUserBalance = async (db, requestObject) => {
+    const { userid, increaseAmout } = requestObject;
+
+    const user = await getUser(db, userid);
+
+    const newBalance = Number(user.balance) + Number(increaseAmout);
+
+    updateUserBalance(db, userid, newBalance);
+    
+    return 'ok';
+}
+
 export const getUser = (db, userId) => {
     return new Promise(resolve => {
         db.serialize(() => {
