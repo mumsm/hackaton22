@@ -15,6 +15,13 @@ contract Suschainable {
     nfts[0] = NFT("Red Coat", "A fashion coat", "null") ;
     nfts[1] = NFT("Blue Coat", "A fashion coat", "null");
     nfts[2] = NFT("Green Coat", "A fashion coat", "null");
+    nfts[3] = NFT("Black Coat", "A fashion coat", "null");
+    nfts[4] = NFT("Green Coat", "A fashion coat", "null");
+    nfts[5] = NFT("Green Coat", "A fashion coat", "null");
+    nfts[6] = NFT("Green Coat", "A fashion coat", "null");
+    nfts[7] = NFT("Green Coat", "A fashion coat", "null");
+    nfts[8] = NFT("Green Coat", "A fashion coat", "null");
+    nfts[9] = NFT("Green Coat", "A fashion coat", "null");
   }
 
   function changeOwner(string memory newOwner, uint nftIndex) public {

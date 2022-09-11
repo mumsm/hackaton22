@@ -47,11 +47,11 @@ db.serialize(() => {
     
     db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (7, 'Eletric Bike', 'For lazy people', 5000, 6, 0)"); 
     
-    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (8, 'Shades', 'I'm Batman', 15000, 7, 0)"); 
+    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (8, 'Shades', 'Im Batman', 15000, 7, 0)"); 
     
     db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (9, 'Bulletproof Coat', 'Always prepared', 50000, 8, 0)"); 
     
-    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (10, 'Hekmet', 'Unlock 100% of Cerebral Actions', 100000, 9, 0)"); 
+    db.run("INSERT INTO nfts (id, title, description, price, smartContractIndex, owner_user_id) VALUES (10, 'Helmet', 'Unlock 100% of Cerebral Actions', 100000, 9, 0)"); 
 
     db.each("SELECT * FROM nfts", (err, row) => {
         console.log(row);
