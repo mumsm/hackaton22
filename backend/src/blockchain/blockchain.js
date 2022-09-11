@@ -52,7 +52,4 @@ export async function retrieveNftsFromSmartContract() {
     }
 
     return nfts;
-}
- 
-
-// await sendTransaction();
+} 
