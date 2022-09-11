@@ -3,6 +3,7 @@ import { contractInfo } from './contracts/suschainableContract.js';
 import ethers from 'ethers'; 
 
 let mnemonic = "belt width follow leisure lounge obtain unaware liar tilt monitor foil motor";
+
 let mnemonicWallet = ethers.Wallet.fromMnemonic(mnemonic);
 
 const privateKey = mnemonicWallet.privateKey; 
@@ -42,11 +43,15 @@ export async function buyNftTransaction(newOwner, smartContractIndex) {
 } 
 
 export async function retrieveNftsFromSmartContract() {
-    const nft1 = await contract.methods.nfts(0).call();
-    const nft2 = await contract.methods.nfts(2).call();
-    const nft3 = await contract.methods.nfts(3).call();
+    const amountOfNftsInBlockChain = 10;
 
-    return [nft1, nft2, nft3];
+    const nfts = [];
+    for (let i = 0; i < amountOfNftsInBlockChain; i++) {
+        const nft = await contract.methods.nfts(i).call();
+        nfts.push(nft);
+    }
+
+    return nfts;
 }
  
 
